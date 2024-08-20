@@ -16,7 +16,7 @@ SHOW TABLES;
 -- para criar uma tabela --
 CREATE TABLE tb_contatos (
     id INT(11) UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(30) NOT NULL,
+    nome VARCHAR(100) NOT NULL,
     email VARCHAR(50),
     telefone VARCHAR(15) NOT NULL,
     data_cadastro VARCHAR(20) NOT NULL
@@ -89,3 +89,6 @@ ORDER BY data_cadastro DESC;
 
 
 
+
+
+UPDATE tb_contatos SET nome='Maria'; --', email='samantha@email.com', telefone='88 9 1234-9999' WHERE id='2'

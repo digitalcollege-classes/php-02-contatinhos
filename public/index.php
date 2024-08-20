@@ -15,5 +15,3 @@ function conexao(): PDO
 {
     return include '../src/conexao.php';
 }
-
-
