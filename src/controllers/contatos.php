@@ -2,10 +2,12 @@
 
 declare(strict_types=1);
 
+const SELECT_ALL = 'SELECT * FROM tb_contatos';
+
 // /contatos/listar
 function contatos_listar(): void
 {
-    $dados = conexao()->query('SELECT * FROM tb_contatos');
+    $dados = conexao()->query(SELECT_ALL);
 
     view('listar', $dados->fetchAll());
 }
