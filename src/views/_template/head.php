@@ -34,5 +34,19 @@
         <i class="material-icons text-black-50">star</i>
         <i class="material-icons text-black-50">star</i>
 
+
+        <div class="row">
+            <div class="col-4">
+                <div class="alert alert-danger">
+                    Mensagem de erro
+                </div>
+
+                <div class="alert alert-success">
+                    Mensagem de sucesso
+                </div>
+            </div>
+        </div>
+        
+
         <hr>
     
