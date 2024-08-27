@@ -91,4 +91,14 @@ ORDER BY data_cadastro DESC;
 
 
 
-UPDATE tb_contatos SET nome='Maria'; --', email='samantha@email.com', telefone='88 9 1234-9999' WHERE id='2'
+UPDATE tb_contatos SET nome='Maria'; --', email='samantha@email.com', telefone='88 9 1234-9999' WHERE id='2';
+
+
+CREATE TABLE tb_lugares (
+    id INT(11) UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    endereco VARCHAR(50),
+    avaliacao INT (1),
+    data_cadastro VARCHAR(20) NOT NULL,
+    data_edicao VARCHAR(20) NULL
+);

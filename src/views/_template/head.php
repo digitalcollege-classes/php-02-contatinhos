@@ -27,23 +27,28 @@
             <a class="btn <?php echo $url === '/lugares/adicionar' ? 'btn-dark' : 'btn-outline-dark';  ?>" href="/lugares/adicionar">Novo Lugar</a>
         </nav>
 
-
-        <i class="material-icons text-warning">star</i>
-        <i class="material-icons text-warning">star</i>
-        <i class="material-icons text-black-50">star</i>
-        <i class="material-icons text-black-50">star</i>
-        <i class="material-icons text-black-50">star</i>
-
-
-        <div class="row">
+        <div class="row mt-3">
             <div class="col-4">
-                <div class="alert alert-danger">
-                    Mensagem de erro
-                </div>
+                <?php 
+                    if (true === isset($_SESSION['sucesso'])) {
+                        echo "
+                        <div class='alert alert-success'>
+                            {$_SESSION['sucesso']}
+                        </div>
+                        ";
+                    }
+                ?>
 
-                <div class="alert alert-success">
-                    Mensagem de sucesso
-                </div>
+                <?php 
+                    if (true === isset($_SESSION['erro'])) {
+                        echo "
+                        <div class='alert alert-danger'>
+                            {$_SESSION['erro']}
+                        </div>
+                        ";
+                    }
+                ?>
+
             </div>
         </div>
         

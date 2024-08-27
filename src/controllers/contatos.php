@@ -33,6 +33,9 @@ function contatos_add(): void
             ':data' => $data,
         ]);
 
+
+        $_SESSION['sucesso'] = 'Pronto, Novo Contatinho criado';
+
         //redirecionar
         header('location: /contatos/listar');
     } 
@@ -46,6 +49,7 @@ function contatos_excluir(): void
     $sql = "DELETE FROM tb_contatos WHERE id='{$id}'";
 
     conexao()->query($sql);
+    $_SESSION['sucesso'] = 'Pronto, Contatinho removido';
 
     header('location: /contatos/listar');
 }
